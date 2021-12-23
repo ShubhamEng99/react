@@ -1,10 +1,7 @@
 import React from 'react'
 
-class CartItem extends React.Component{
-   
-    render(){
-        
-        const {title,quantity,price,img}=this.props.product
+const CartItem=(props)=>{
+        const {title,quantity,price,img}=props.product
         return(
           <div className='cartitem'>
               <div className='left-block'>
@@ -16,14 +13,14 @@ class CartItem extends React.Component{
               <div>Rs {price}</div>
               <div>QWT:{quantity}</div>
               <div className='cart-item-actions'>
-                <button onClick={()=>this.props.onincreasequantity(this.props.product)}>+</button>
-                <button onClick={this.decreasequantity}>-</button>
-                <button>del</button>
+                <button onClick={()=>props.onincreasequantity(props.product)}>+</button>
+                <button onClick={()=>props.ondecreasequantity(props.product)}>-</button>
+                <button onClick={()=>props.ondeleteproduct(props.product)}>del</button>
               </div>
               </div>
           </div>
         );
-    }
+    
 }
 const styles={
     image:{

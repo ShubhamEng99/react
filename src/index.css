@@ -35,3 +35,22 @@ align-items: center;
 flex-direction: column;
 
 }
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background-color: black;
+  color: aliceblue;
+}
+.count
+{
+  background-color: rgb(221, 180, 180);
+  color: black;
+  height: 20px;
+  width:40px;
+  border-radius: 50%;
+  position: relative;
+  left:42px;
+  bottom:5px
+}
